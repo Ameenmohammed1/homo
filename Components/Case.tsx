@@ -1,126 +1,127 @@
-import React from 'react'
-import './styles.css'
+import React from 'react';
+import './styles.css'; // Ensure you have this file for the .blur-gradient class
+
 function Case() {
   return (
-    <div className='w-[100%] h-auto min-h-[100vh] bg-black overflow-hidden text-white '>
-      <div className="w-[100%] bg-[#070707] relative  h-[80vh] flex">
-        {/* <div className="blur-gradient absolute top-5 right-[-50px] w-[500px] h-[500px]"></div> */}
-        <div className="w-[50%] h-[100%] flex flex-col px-[40px] justify-center gap-6">
-          <h1 className='text-[3rem]'>
-            <span className='text-[#913ffd]'>Human-like</span> <br /> Customer Support
-          </h1>
-          <p className='text-gray-400'>
-            We built AI agents that understand context and respond like real humans,
-            helping your customers get accurate answers instantly and effortlessly.
-          </p>
+    <div className='w-full min-h-screen bg-black text-white overflow-hidden'>
+      {/* On mobile, we use a flex column with a significant gap to space out the feature cards.
+        On desktop (lg), these styles are removed to allow the original stacking.
+      */}
+      <div className="flex flex-col gap-24 lg:gap-0">
 
-          <button className='w-[150px] border py-[5px] rounded-full'>Get Connect</button>
+        {/* Section 1: Customer Support */}
+        {/* On desktop, lg:flex-row-reverse places the text on the left */}
+        <div className="w-full h-auto lg:h-[80vh] bg-[#070707] flex flex-col lg:flex-row-reverse relative">
+          {/* Video Container */}
+          <div className="w-full lg:w-1/2 h-[50vh] lg:h-full flex justify-center items-center p-6 lg:p-12 z-10">
+            <video
+              src="/vidoe1.mp4"
+              muted loop autoPlay playsInline
+              className="w-full h-full object-cover rounded-2xl shadow-2xl shadow-[#913ffd]/20"
+            />
+          </div>
+          {/* Text Content Card */}
+          <div className="w-full lg:w-1/2 flex justify-center items-center p-6 lg:p-0">
+            <div className="relative w-full max-w-md bg-[#101010] lg:bg-transparent rounded-2xl p-8 -mt-20 lg:mt-0 border border-white/10 lg:border-none">
+              <h1 className='text-3xl lg:text-[3rem] font-bold text-center lg:text-left'>
+                <span className='text-[#913ffd]'>Human-like</span> <br /> Customer Support
+              </h1>
+              <p className='text-gray-400 mt-4 text-center lg:text-left'>
+                Our AI agents understand context and respond like real humans, helping you deliver instant, effortless support.
+              </p>
+              <button className='w-full lg:w-[150px] mt-6 bg-[#913ffd] text-white font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity'>
+                Get Connect
+              </button>
+            </div>
+          </div>
         </div>
-        <div className="w-[50%] flex justify-center p-[40px] h-[100%]">
-          <video
-            src="/vidoe1.mp4"
-            muted
-            loop
-            autoPlay
-            playsInline
-            className="w-full h-full z-20"
-          />
+
+        {/* Section 2: Booking Assistant */}
+        {/* On desktop, lg:flex-row places the video on the left */}
+        <div className="w-full h-auto lg:h-[80vh] flex flex-col lg:flex-row relative">
+          <div className="blur-gradient absolute top-[-130px] right-[-200px] w-[500px] h-[500px]"></div>
+          {/* Video Container */}
+          <div className="w-full lg:w-1/2 h-[50vh] lg:h-full flex justify-center items-center p-6 lg:p-12 z-10">
+            <video
+              src="/video2.mp4"
+              muted loop autoPlay playsInline
+              className="w-full h-full object-cover rounded-2xl shadow-2xl shadow-[#913ffd]/20"
+            />
+          </div>
+          {/* Text Content Card */}
+          <div className="w-full lg:w-1/2 flex justify-center items-center p-6 lg:p-0">
+            <div className="relative w-full max-w-md bg-[#101010] lg:bg-transparent rounded-2xl p-8 -mt-20 lg:mt-0 border border-white/10 lg:border-none">
+              <h1 className='text-3xl lg:text-[3rem] font-bold text-center lg:text-left'>
+                <span className='text-[#913ffd]'>Smart AI</span> <br /> Booking Assistant
+              </h1>
+              <p className='text-gray-400 mt-4 text-center lg:text-left'>
+                Our AI handles scheduling, reminders, and confirmations just like a real assistant, making booking seamless.
+              </p>
+              <button className='w-full lg:w-[150px] mt-6 bg-[#913ffd] text-white font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity'>
+                Get Connect
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        {/* Section 3: Automate Your Work */}
+        {/* On desktop, lg:flex-row-reverse places the text on the left */}
+        <div className="w-full h-auto lg:h-[80vh] bg-[#070707] flex flex-col lg:flex-row-reverse relative">
+          {/* Video Container */}
+          <div className="w-full lg:w-1/2 h-[50vh] lg:h-full flex justify-center items-center p-6 lg:p-12 z-10">
+            <video
+              src="/video3.mp4"
+              muted loop autoPlay playsInline
+              className="w-full h-full object-cover rounded-2xl shadow-2xl shadow-[#913ffd]/20"
+            />
+          </div>
+          {/* Text Content Card */}
+          <div className="w-full lg:w-1/2 flex justify-center items-center p-6 lg:p-0">
+            <div className="relative w-full max-w-md bg-[#101010] lg:bg-transparent rounded-2xl p-8 -mt-20 lg:mt-0 border border-white/10 lg:border-none">
+              <h1 className='text-3xl lg:text-[3rem] font-bold text-center lg:text-left'>
+                <span className='text-[#913ffd]'>Automate</span> <br /> Your Work with AI
+              </h1>
+              <p className='text-gray-400 mt-4 text-center lg:text-left'>
+                Save hours of manual effort, streamline your workflow, and ship products faster—all powered by intelligent AI automation.
+              </p>
+              <button className='w-full lg:w-[150px] mt-6 bg-[#913ffd] text-white font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity'>
+                Get Connect
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Section 4: AI Agents That Act Like Humans */}
+        {/* On desktop, lg:flex-row places the video on the left */}
+        <div className="w-full h-auto lg:h-[80vh] flex flex-col lg:flex-row relative">
+          <div className="blur-gradient absolute top-[-130px] right-[-200px] w-[500px] h-[500px]"></div>
+          {/* Video Container */}
+          <div className="w-full lg:w-1/2 h-[50vh] lg:h-full flex justify-center items-center p-6 lg:p-12 z-10">
+            <video
+              src="/video4.mp4"
+              muted loop autoPlay playsInline
+              className="w-full h-full object-cover rounded-2xl shadow-2xl shadow-[#913ffd]/20"
+            />
+          </div>
+          {/* Text Content Card */}
+          <div className="w-full lg:w-1/2 flex justify-center items-center p-6 lg:p-0">
+            <div className="relative w-full max-w-md bg-[#101010] lg:bg-transparent rounded-2xl p-8 -mt-20 lg:mt-0 border border-white/10 lg:border-none">
+              <h1 className='text-3xl lg:text-[3rem] font-bold text-center lg:text-left'>
+                <span className='text-[#913ffd]'>AI Agents</span> <br /> That Act Like Humans
+              </h1>
+              <p className='text-gray-400 mt-4 text-center lg:text-left'>
+                From booking trips to automating workflows, our AI connects to your databases and executes functions seamlessly in real time.
+              </p>
+              <button className='w-full lg:w-[150px] mt-6 bg-[#913ffd] text-white font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity'>
+                Get Connect
+              </button>
+            </div>
+          </div>
         </div>
 
       </div>
-
-      <div className="w-[100%] h-[80vh] px-[40px] overflow-hidden relative flex">
-  <div className="blur-gradient absolute top-[-130px] right-[-200px] w-[500px] h-[500px]"></div>
-        <div className="w-[50%] flex justify-center p-[40px] h-[100%]">
-          <video
-            src="/video2.mp4"
-            muted
-            loop
-            autoPlay
-            playsInline
-            className="w-full h-full"
-          />
-        </div>
-
-        <div className="w-[50%] h-[100%] flex flex-col justify-center gap-6">
-          <h1 className='text-[3rem]'>
-            <span className='text-[#913ffd]'>Smart AI</span> <br /> Booking Assistant
-          </h1>
-          <p className='text-gray-400'>
-            From trips to consulting sessions and business meetings — our AI agent
-            makes scheduling seamless, handling availability, reminders, and
-            confirmations just like a real assistant.
-          </p>
-
-
-          <button className='w-[150px] border py-[5px] rounded-full'>Get Connect</button>
-        </div>
-
-
-      </div>
-
-      <div className="w-[100%] h-[80vh] px-[40px] bg-[#070707] flex">
-        <div className="w-[50%] h-[100%] flex flex-col justify-center gap-6">
-          <h1 className='text-[3rem]'>
-            <span className='text-[#913ffd]'>Automate</span> <br /> Your Work with AI
-          </h1>
-          <p className='text-gray-400'>
-            Save hours of manual effort, streamline your workflow, and ship products
-            faster — all powered by intelligent AI automation.
-          </p>
-
-
-          <button className='w-[150px] border py-[5px] rounded-full'>Get Connect</button>
-        </div>
-        <div className="w-[50%] flex justify-center p-[40px] h-[100%]">
-          <video
-            src="/video3.mp4"
-            muted
-            loop
-            autoPlay
-            playsInline
-            className="w-full h-full"
-          />
-        </div>
-
-      </div>
-
-      <div className="w-[100%] relative  px-[40px] h-[80vh] overflow-hidden flex">
-  <div className="blur-gradient absolute top-[-130px] right-[-200px] w-[500px] h-[500px]"></div>
-
-        <div className="w-[50%] flex justify-center p-[40px] h-[100%]">
-          <video
-            src="/video4.mp4"
-            muted
-            loop
-            autoPlay
-            playsInline
-            className="w-full h-full z-20"
-          />
-        </div>
-
-        <div className="w-[50%] h-[100%] flex flex-col justify-center gap-6">
-          <h1 className='text-[3rem]'>
-            <span className='text-[#913ffd]'>AI Agents</span> <br /> That Act Like Humans
-          </h1>
-          <p className='text-gray-400'>
-            Our chat-based AI doesn’t just talk — it connects directly to your databases
-            and executes functions just like a human would. From booking trips and
-            scheduling meetings to running queries and automating workflows,
-            everything happens seamlessly in real time.
-          </p>
-
-
-
-          <button className='w-[150px] border py-[5px] rounded-full'>Get Connect</button>
-        </div>
-
-
-      </div>
-
-
     </div>
-  )
+  );
 }
 
-export default Case
+export default Case;
