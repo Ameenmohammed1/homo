@@ -1,0 +1,30 @@
+  .blur-gradient{
+    width: 360px; 
+    height: 360px;
+    border-radius: 9999px;              /* nice blob */
+    background: radial-gradient(
+      circle at 30% 30%,
+      #913ffd 0%,
+      rgba(145,63,253,0.6) 35%,
+      rgba(145,63,253,0.25) 65%,
+      rgba(145,63,253,0) 100%
+    );
+    filter: blur(50px);                  /* the blur */
+    opacity: 0.9;                        /* optional softness */
+  }
+
+
+  .blur-gradient-white {
+  width: 360px; 
+  height: 360px;
+  border-radius: 9999px; /* circular blob */
+  background: radial-gradient(
+    circle at 30% 30%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.6) 35%,
+    rgba(255, 255, 255, 0.25) 65%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: blur(50px);
+  opacity: 0.9;
+}

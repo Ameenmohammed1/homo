@@ -1,6 +1,35 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
+
+const gtWalsheim = localFont({
+  src: [
+    {
+      path: "../public/GT-Walsheim-Regular-Oblique-Trial-BF651b7fc67342f.otf",
+      weight: "400",
+     
+    },
+    {
+      path: "../public/GT-Walsheim-Medium-Oblique-Trial-BF651b7fc69eff5.otf",
+      weight: "500",
+ 
+    },
+    {
+      path: "../public/GT-Walsheim-Condensed-Bold-Oblique-Trial-BF651b7fc702d7b.otf",
+      weight: "700",
+
+    },
+    {
+      path: "../public/GT-Walsheim-Black-Oblique-Trial-BF651b7fc5608e6.otf",
+      weight: "900",
+     
+    },
+  ],
+  variable: "--font-gtwalsheim",
+  display: "swap",
+});
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${gtWalsheim.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
