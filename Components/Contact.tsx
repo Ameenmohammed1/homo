@@ -15,7 +15,7 @@ const Spline = dynamic(() => import("@splinetool/react-spline"), {
 function Contact() {
   return (
     // FIX: Restored the fixed h-[90vh] for desktop (lg:) view. Mobile remains flexible with h-auto.
-    <div className="w-full h-auto lg:h-[90vh] bg-black text-white flex flex-col lg:flex-row relative overflow-hidden">
+    <div id='contact' className="w-full h-auto lg:h-[90vh] bg-black text-white flex flex-col lg:flex-row relative overflow-hidden">
       <div className="blur-gradient absolute bottom-[-130px] left-[-200px] w-[500px] h-[500px]"></div>
 
       {/* Left Section (Text) */}
@@ -32,7 +32,7 @@ function Contact() {
           <span className="text-[#913ffd] font-semibold"> no development fee</span>.
         </p>
 
-        <button className="w-[180px] py-3 rounded-xl text-white font-medium
+        <button     onClick={()=>window.location.href = "https://cal.com/zuvany/homo"} className="w-[180px] py-3 rounded-xl text-white font-medium
           bg-gradient-to-r from-[#913ffd] to-purple-600
           shadow-lg shadow-purple-900/40
           hover:scale-105 hover:shadow-purple-800/60

@@ -15,19 +15,20 @@ const Spline = dynamic(() => import("@splinetool/react-spline"), {
 
 function Main() {
   return (
-    <div className='w-full relative h-auto md:h-[100vh] bg-black overflow-hidden'>
+    <div id='home' className='w-full relative h-auto md:h-[100vh] bg-black overflow-hidden'>
 
       {/* Header */}
       <div className="w-full h-[12vh] flex px-6 md:px-[40px] justify-between items-center z-20">
         <img src="homo.png" className='h-[35px]' alt="Logo" />
         <ul className='hidden md:flex text-white gap-3'>
-          <li>Home</li>
-          <li>Features</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#feature">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <div className="hidden md:block">
-          <RainbowButton>Book Consulting</RainbowButton>
+          <RainbowButton             onClick={()=>window.location.href = "https://cal.com/zuvany/homo"}
+            >Book Consulting</RainbowButton>
         </div>
       </div>
 
@@ -52,6 +53,7 @@ function Main() {
               border: "none",
             }}
             className="mt-6 w-[220px] py-4 font-semibold rounded-xl shadow-lg"
+            onClick={()=>window.location.href = "https://cal.com/zuvany/homo"}
           >
             Book Your AI Employee
           </RainbowButton>

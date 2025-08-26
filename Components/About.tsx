@@ -14,7 +14,7 @@ const Spline = dynamic(() => import("@splinetool/react-spline"), {
 function About() {
   return (
     // Main container: Stacks vertically on mobile, becomes a row on large screens.
-    <div className='w-full min-h-[90vh] flex flex-col lg:flex-row bg-black text-white'>
+    <div id='about' className='w-full min-h-[90vh] flex flex-col lg:flex-row bg-black text-white'>
       
       {/* 3D Model Section */}
       {/* Full width on mobile with a fixed height, half width on large screens */}

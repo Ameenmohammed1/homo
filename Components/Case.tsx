@@ -1,9 +1,10 @@
+'use client'
 import React from 'react';
 import './styles.css'; // Ensure you have this file for the .blur-gradient class
 
 function Case() {
   return (
-    <div className='w-full min-h-screen bg-black text-white overflow-hidden'>
+    <div id='feature' className='w-full min-h-screen bg-black text-white overflow-hidden'>
       {/* On mobile, we use a flex column with a significant gap to space out the feature cards.
         On desktop (lg), these styles are removed to allow the original stacking.
       */}
@@ -29,7 +30,7 @@ function Case() {
               <p className='text-gray-400 mt-4 text-center lg:text-left'>
                 Our AI agents understand context and respond like real humans, helping you deliver instant, effortless support.
               </p>
-              <button className='w-full lg:w-[150px] mt-6 bg-[#913ffd] text-white font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity'>
+              <button     onClick={()=>window.location.href = "https://cal.com/zuvany/homo"} className='w-full lg:w-[150px] mt-6 bg-[#913ffd] text-white font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity'>
                 Get Connect
               </button>
             </div>
@@ -57,7 +58,7 @@ function Case() {
               <p className='text-gray-400 mt-4 text-center lg:text-left'>
                 Our AI handles scheduling, reminders, and confirmations just like a real assistant, making booking seamless.
               </p>
-              <button className='w-full lg:w-[150px] mt-6 bg-[#913ffd] text-white font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity'>
+              <button     onClick={()=>window.location.href = "https://cal.com/zuvany/homo"} className='w-full lg:w-[150px] mt-6 bg-[#913ffd] text-white font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity'>
                 Get Connect
               </button>
             </div>
@@ -84,7 +85,7 @@ function Case() {
               <p className='text-gray-400 mt-4 text-center lg:text-left'>
                 Save hours of manual effort, streamline your workflow, and ship products faster—all powered by intelligent AI automation.
               </p>
-              <button className='w-full lg:w-[150px] mt-6 bg-[#913ffd] text-white font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity'>
+              <button onClick={()=>window.location.href = "https://cal.com/zuvany/homo"} className='w-full lg:w-[150px] mt-6 bg-[#913ffd] text-white font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity'>
                 Get Connect
               </button>
             </div>
@@ -112,7 +113,7 @@ function Case() {
               <p className='text-gray-400 mt-4 text-center lg:text-left'>
                 From booking trips to automating workflows, our AI connects to your databases and executes functions seamlessly in real time.
               </p>
-              <button className='w-full lg:w-[150px] mt-6 bg-[#913ffd] text-white font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity'>
+              <button     onClick={()=>window.location.href = "https://cal.com/zuvany/homo"}  className='w-full lg:w-[150px] mt-6 bg-[#913ffd] text-white font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity'>
                 Get Connect
               </button>
             </div>
