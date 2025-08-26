@@ -27,12 +27,15 @@ function About() {
       <div className="w-full lg:w-[50%] h-auto flex flex-col justify-center p-6 lg:pl-[30px] text-center lg:text-left">
         {/* Responsive font size */}
         <h1 className='text-4xl md:text-5xl lg:text-[4rem] font-bold'>About Us</h1>
-        <p className='text-gray-300 text-lg mt-4'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente fugit maxime aspernatur ea inventore velit itaque, facilis perferendis placeat. Sequi provident quas voluptatem neque debitis.
-        </p>
-        <p className='text-white text-lg mt-2'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aspernatur, illo perferendis natus nihil quos facilis vel aperiam atque repellendus nobis ratione error, quas rerum.
-        </p>
+<p className='text-gray-300 text-lg mt-4'>
+  Homo is a sub-project of Zuvany focused on building AI employees that work like humans — but faster, smarter, and available 24/7. 
+  Businesses can share their challenges, and Homo creates custom AI agents to solve them.
+</p>
+<p className='text-white text-lg mt-2'>
+  From customer support and appointment booking to trip planning and workflow automation, Homo helps companies save time, reduce costs, and scale effortlessly. 
+  It’s not just automation — it’s the future of work.
+</p>
+
       </div>
       
     </div>
